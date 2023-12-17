@@ -2,10 +2,13 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import HomePage from "./pages/Home"
 import ProductsPage from "./pages/Products"
 import RouteLayout from "./components/RouteLayout"
+import ErrorPage from "./pages/Error"
 
 // **** Prefered ****
 const router = createBrowserRouter([
-  {path:'/',element:<RouteLayout></RouteLayout>,children:[
+  {path:'/',element:<RouteLayout></RouteLayout>,
+  errorElement:<ErrorPage></ErrorPage>,
+  children:[
 
     {path:'/',element:<HomePage></HomePage>},
     {path:'/products',element:<ProductsPage></ProductsPage>},
@@ -28,7 +31,7 @@ const router = createBrowserRouter([
 
 const App = ()=>{
   return (
-    <div >
+    <div className=" ">
       <div>
         <RouterProvider router={router}></RouterProvider>
       </div>
