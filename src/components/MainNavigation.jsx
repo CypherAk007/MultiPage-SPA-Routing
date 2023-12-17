@@ -9,7 +9,7 @@ const MainNavigation = ()=>{
                     <NavLink to='/' className={({isActive})=>isActive?classes.active:undefined} end>Home</NavLink>
                     </li>
                     <li className=" decoration-solid  text-green-600">
-                        <NavLink to='/products' className={({isActive})=>isActive?'text-white underline':undefined}>Products</NavLink>
+                        <NavLink to='/products' className={({isActive})=>isActive?'text-white underline':undefined } end>Products</NavLink>
                     </li>
                 </ul>
             </nav>
