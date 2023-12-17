@@ -17,7 +17,7 @@ const ProductsPage = ()=>{
             <h1 className="text-5xl">The Products Page</h1>
             <ul className="text-3xl my-8 text-green-500">
             {PRODUCTS.map((product)=>(<li key={product.id}>
-                <Link to={`/products/${product.id}`}>{product.title}</Link>
+                <Link to={product.id}>{product.title}</Link>
             </li>))}
 
             </ul>
